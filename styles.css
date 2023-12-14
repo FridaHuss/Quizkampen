@@ -1,8 +1,55 @@
 #header {
+    display: flex;
     height: 100px;
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+    margin: 10px ;
+    border:solid;
+    border-radius: 5px;
+    border-color: rgb(0, 47, 255);
+    padding: 30px;
+    color: white;
+    background-color: rgb(165, 127, 255);
+    outline: 5px darkblue solid;
+    font-weight: bold;
+   
     
 }
+
+
+.buttons{
+    
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    background-color: blue;
+    
+    
+}
+
+.allBttn {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 2px solid;
+    border-radius: 100px;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+#headline {
+
+    display: inline-block;
+    flex:1;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
 
 #main{
 display: flex;
@@ -24,6 +71,7 @@ background-color: rgb(83, 83, 240);
     width: 1500px;
     height: 300px;
     background-color: rgb(83, 83, 240);
+    justify-content: center;
 }
 
 #question-box{
