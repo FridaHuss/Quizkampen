@@ -1,12 +1,13 @@
 #header {
     display: flex;
-    border:10px solid;
-    border-image: linear-gradient(45deg, pink, blue);
-    border-image-slice:1;
-    border-color: rgb(124, 124, 236);
-    padding: 30px;
-    background: whitesmoke;
+    background: transparent;
     align-items: flex-start;
+    padding: 10px;
+}
+
+#absoluteAll {
+
+    background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
 }
 
 @keyframes dance {
@@ -74,6 +75,14 @@ h1{
     animation: shine 2s infinite;
 
 }
+h2{
+
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    animation: shine 2s infinite;
+    
+}
 
 .buttons{
     display: flex;
@@ -100,22 +109,42 @@ h1{
     background-color: rgb(100, 97, 255);
     transition-duration: 0.2s;
     transform: scale(1.2);
-    box-shadow: 0 0 20px #d4a2ca;
+    box-shadow: 0 0 20px #ffffff;
 }
 
 #main{
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 800px;
-background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    background-color: transparent;
 }
 
 #points{
-    display: felx;
-    background-color: aliceblue;
+    display: flex;
+    background-color: transparent;
     width: 1000px;
-    height: 50px;
+    height: 1000px;
+    box-shadow: 0 0 20px #ffffff;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.circleContainer{
+    display: flex;
+    
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background-color:white;
+    padding: 10px;
+    
+
 }
 
 #question{
@@ -130,16 +159,15 @@ background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1000px;
+    width: 950px;
     height: 200px;
-    border: solid;
-    border-image: linear-gradient(45deg, pink, blue);
     border-radius: 20px;
     font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     background-color: white;
-    box-shadow: 0 0 50px #dd8ecc;
+    box-shadow: 0 0 50px #ffffff;
+    margin: 10px;
 }
 
 #answers{
@@ -149,7 +177,7 @@ background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
     padding: 20px;
     background-color: transparent;
     border-radius: 20px;
-    box-shadow: 0 0 50px #da8ec9;
+    box-shadow: 0 0 50px #ffffff;
 }
 
 .answers-buttons{
@@ -159,7 +187,7 @@ background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
     margin: 20px;
     border-radius: 20px;
     animation: dance 3s infinite;
-    box-shadow: 0 0 50px #22121f;
+    box-shadow: 0 0 20px #9e9b9e;
 }
 
 .answers-buttons:hover{
