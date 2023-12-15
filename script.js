@@ -5,6 +5,8 @@ const answer2Element = document.querySelector('#answer2')
 const answer3Element = document.querySelector('#answer3')
 const answer4Element = document.querySelector('#answer4')
 
+
+
 const question1 = {
     question: 'Vad är Sveriges huvudstad?',
     answer1: 'Köpenhamn',
@@ -55,4 +57,7 @@ answer1Element.textContent=question1.answer1;
 answer2Element.textContent=question1.answer2;
 answer3Element.textContent=question1.answer3;
 answer4Element.textContent=question1.answer4;
+
+
+
 
