@@ -1,3 +1,5 @@
+
+
 #header {
     display: flex;
     background: transparent;
@@ -6,7 +8,6 @@
 }
 
 #absoluteAll {
-
     background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
 }
 
@@ -115,7 +116,6 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
     background-color: transparent;
 }
 
@@ -123,7 +123,6 @@ h2{
     display: flex;
     background-color: transparent;
     width: 950px;
-    height: 1000px;
     box-shadow: 0 0 20px #ffffff;
     border-radius: 40px;
     justify-content: center;
@@ -203,4 +202,134 @@ h2{
 
 #answer4{
     align-self: center;
+}
+
+
+@media screen and (max-width: 990px) {
+
+    h1{
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size:30pxpx;
+    }
+
+    .buttons{
+        font-size: 10px;
+    }
+    
+    .allBttn {
+        font-size: 10px;
+        background-color: rgb(124, 124, 236);
+        padding: 10px;
+        margin: 5px; 
+    }
+    
+    #points{
+        width: 500px;
+        height: 50px;
+    }
+    
+    .circleContainer{
+        width: 500px;
+    }
+    
+    .circle{
+        width: 0,25;
+        height: 0,25px;
+        padding: 10px;
+    }
+    
+    #question{
+        display: flex;
+        align-items: center;
+        height: 300px;
+        background-color: transparent;
+        justify-content: center;
+    }
+    
+    #question-box{
+        width: 500px;
+        height: 200px;
+        font-size: 30px;
+        margin: 5px;
+    }
+    
+    #answers{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .answers-buttons{
+        width: 200px;
+        height: 150px;
+        font-size: 15px;
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    h1{
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    #header {
+        
+    }
+
+    .buttons{
+        font-size: 10px;
+    }
+    
+    .allBttn {
+        font-size: 5px;
+        padding: 10px;
+        margin: 5px; 
+    }
+    
+    #points{
+        width: 250px;
+        height: 40px;
+    }
+    
+    .circleContainer{
+        width: 200px;
+    }
+    
+    .circle{
+        width: 0,05;
+        height: 0,05px;
+        padding: 5px;
+    }
+    
+    #question{
+        height: 100px;
+    }
+    
+    #question-box{
+        width: 250px;
+        height: 100px;
+        font-size: 15px;
+        margin: 2px;
+    }
+    
+    #answers{
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .answers-buttons{
+        width: 100px;
+        height: 50px;
+        font-size: 10px;
+        margin: 10px;
+    }
 }
