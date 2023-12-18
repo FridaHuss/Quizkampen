@@ -26,7 +26,7 @@ const questions = [
     },
     {
         question: 'När är det julafton?',
-        answers: ['22 december','23 december','25 december','26 december'],
+        answers: ['22 december','23 december','24 december','25 december'],
         correctAnswer: '24 december'
     },
     {
@@ -38,6 +38,8 @@ const questions = [
 
 
 function showCurrentQuestion() {
+    resetButtonColors();
+
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
     answer1Element.textContent = currentQuestion.answers[0];
@@ -61,31 +63,22 @@ function checkAnswer(button){
     
     if(selectedAnswer === currentQuestion.correctAnswer) {
         button.style.backgroundColor = "green";
-    } 
-    else{
-        button.style.backgroundColor = "red";
-
         currentQuestionIndex++;
 
-        if (currentQuestionIndex < questions.length) {
-            showCurrentQuestion();
-            //la till den här för annars så försvann inte färgerna efter man tryckt på valfri knapp
-            resetButtonColors();
-        }
+        setTimeout(function(){
+            showCurrentQuestion()
+        },1000);
+    } else{
+        button.style.backgroundColor = "red";
+        currentQuestionIndex++;
 
-        // setTimeout(function() {
+        setTimeout(function(){
+            showCurrentQuestion()
+        },1000);
 
-        //     resetButtonColors();
-        //     currentQuestionIndex++;
-        //     if(currentQuestionIndex < questions.length) {
-        //         showCurrentQuestion();
-        //     } else {
-        //         alert("Quiz klart");
-        //     }
-
-        // },1000);
     }
 }
+
 
 //kopplar funktionen checkAnswer() till varje knapp
 answer1Element.addEventListener('click', function() {
