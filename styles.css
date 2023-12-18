@@ -1,8 +1,8 @@
 #header {
     display: flex;
     background: transparent;
-    align-items: flex-start;
     padding: 10px;
+    justify-content: flex-end;
 }
 
 #absoluteAll {
@@ -90,7 +90,6 @@ h2{
     background: transparent;
     position:absolute;
     z-index: 2;
-    left: 78%;
 }
 
 .allBttn {
@@ -123,7 +122,7 @@ h2{
 #points{
     display: flex;
     background-color: transparent;
-    width: 1000px;
+    width: 950px;
     height: 1000px;
     box-shadow: 0 0 20px #ffffff;
     border-radius: 40px;
@@ -134,7 +133,10 @@ h2{
 
 .circleContainer{
     display: flex;
-    
+    width: 1000px;
+    justify-content: center;
+    justify-content: space-evenly;
+
 }
 
 .circle{
@@ -143,7 +145,7 @@ h2{
     border-radius: 100px;
     background-color:white;
     padding: 10px;
-    
+ 
 
 }
 

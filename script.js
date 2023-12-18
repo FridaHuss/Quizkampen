@@ -37,6 +37,8 @@ const questions = [
 ];
 
 
+
+
 function showCurrentQuestion() {
     resetButtonColors();
 
@@ -58,18 +60,21 @@ function resetButtonColors() {
 //funktion yani metod för att ändra färg på knapparna
 function checkAnswer(button){
 
-    var selectedAnswer = button.textContent;
+    let circleElement = document.querySelector('#circle' + currentQuestionIndex)  
+    let selectedAnswer = button.textContent;
     const currentQuestion = questions[currentQuestionIndex];
     
     if(selectedAnswer === currentQuestion.correctAnswer) {
-        button.style.backgroundColor = "green";
+        button.style.backgroundColor = 'green';
+        circleElement.style.backgroundColor = 'green'
         currentQuestionIndex++;
 
         setTimeout(function(){
             showCurrentQuestion()
         },1000);
     } else{
-        button.style.backgroundColor = "red";
+        button.style.backgroundColor = 'red';
+        circleElement.style.backgroundColor = 'red';
         currentQuestionIndex++;
 
         setTimeout(function(){
