@@ -1,4 +1,8 @@
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
 #header {
     display: flex;
@@ -7,8 +11,14 @@
     justify-content: flex-end;
 }
 
-#absoluteAll {
+/* #absoluteAll {
     background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
+    
+} */
+
+#absoluteAll {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #3d3df7, #f3f0f2);
 }
 
 @keyframes dance {
@@ -273,7 +283,7 @@ h2{
 
 @media screen and (max-width: 570px) {
 
-    h1{
+   h1{
         font-size: 25px;
     }
 
