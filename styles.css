@@ -11,10 +11,12 @@ body, html {
     justify-content: flex-end;
 }
 
-/* #absoluteAll {
-    background: linear-gradient(45deg,#3d3df7, #f3f0f2 );
-    
-} */
+.end-line{
+    display: flex;
+    background: transparent;
+    padding: 10px;
+    justify-content: center;
+}
 
 #absoluteAll {
     min-height: 100vh;
@@ -96,6 +98,14 @@ h2{
 }
 
 .buttons{
+    display: flex;
+    font-size: 20px;
+    background: transparent;
+    position:absolute;
+    z-index: 2;
+}
+
+.buttons-small-screen{
     display: flex;
     font-size: 20px;
     background: transparent;
@@ -217,12 +227,16 @@ h2{
 
 @media screen and (max-width: 990px) {
 
+    .buttons-small-screen{
+        visibility: collapse;
+    }
+
     h1{
         font-size: 50px;
     }
 
     h2 {
-        font-size:30pxpx;
+        font-size:30px;
     }
 
     .buttons{
@@ -284,23 +298,24 @@ h2{
 @media screen and (max-width: 570px) {
 
    h1{
-        font-size: 25px;
+        font-size: 40px;
     }
 
     h2 {
-        font-size: 15px;
+        font-size: 25px;
     }
 
-    #header {
-        
+    .buttons-small-screen{
+        visibility: visible;
     }
 
     .buttons{
         font-size: 10px;
+        visibility: collapse;
     }
     
     .allBttn {
-        font-size: 5px;
+        font-size: 10px;
         padding: 10px;
         margin: 5px; 
     }
@@ -321,7 +336,7 @@ h2{
     }
     
     #question{
-        height: 100px;
+        height: 120px;
     }
     
     #question-box{
@@ -339,7 +354,7 @@ h2{
     .answers-buttons{
         width: 100px;
         height: 50px;
-        font-size: 10px;
+        font-size: 15px;
         margin: 10px;
     }
 }
