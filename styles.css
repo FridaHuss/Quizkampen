@@ -111,6 +111,7 @@ h2{
     background: transparent;
     position:absolute;
     z-index: 2;
+    visibility: collapse;
 }
 
 .allBttn {

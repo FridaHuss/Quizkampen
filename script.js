@@ -58,31 +58,40 @@ function resetButtonColors() {
 }
 
 //funktion yani metod för att ändra färg på knapparna
-function checkAnswer(button){
-
-    let circleElement = document.querySelector('#circle' + currentQuestionIndex)  
+function checkAnswer(button) {
+    let circleElement = document.querySelector('#circle' + currentQuestionIndex);
     let selectedAnswer = button.textContent;
     const currentQuestion = questions[currentQuestionIndex];
-    
-    if(selectedAnswer === currentQuestion.correctAnswer) {
-        button.style.backgroundColor = 'green';
-        circleElement.style.backgroundColor = 'green'
-        currentQuestionIndex++;
 
-        setTimeout(function(){
-            showCurrentQuestion()
-        },1000);
-    } else{
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+        button.style.backgroundColor = 'green';
+        circleElement.style.backgroundColor = 'green';
+    } else {
         button.style.backgroundColor = 'red';
         circleElement.style.backgroundColor = 'red';
-        currentQuestionIndex++;
-
-        setTimeout(function(){
-            showCurrentQuestion()
-        },1000);
-
     }
+
+    currentQuestionIndex++;
+
+    setTimeout(function () {
+        resetButtonColors();
+        if (currentQuestionIndex < questions.length) {
+            showCurrentQuestion();
+        } else {
+            let allCirclesElements = document.querySelectorAll('.circle');
+            let correctAnswers = 0;
+
+            allCirclesElements.forEach(circle => {
+                if (circle.style.backgroundColor === 'green') {
+                    correctAnswers++;
+                }
+            });
+
+            alert('Du fick ' + correctAnswers + ' poäng');
+        }
+    }, 1000);
 }
+
 
 
 //kopplar funktionen checkAnswer() till varje knapp
@@ -105,3 +114,4 @@ answer4Element.addEventListener('click', function() {
 
 // gör så att frågan laddas upp från början
 showCurrentQuestion();
+
