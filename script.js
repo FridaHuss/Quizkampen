@@ -1,13 +1,14 @@
+//hämtat elemeten för att kunna manipulera elementen
 const questionElement = document.querySelector('#question-box')
 const answer1Element = document.querySelector('#answer1')
 const answer2Element = document.querySelector('#answer2')
 const answer3Element = document.querySelector('#answer3')
 const answer4Element = document.querySelector('#answer4')
 
-// har lagt till det här för arrayen
+//håller koll på vilken fråga som ska visas
 let currentQuestionIndex = 0;
 
-//har gjort om till array
+//array av objekt som håller fråga, svarsalternativ och rätt svar
 const questions = [
     {
         question: 'Vad är Sveriges huvudstad?',
@@ -36,20 +37,22 @@ const questions = [
     }
 ];
 
-
-
-
+//visar nuvarande fråga och svarsalternativ
 function showCurrentQuestion() {
+
     resetButtonColors();
 
     const currentQuestion = questions[currentQuestionIndex];
+
     questionElement.textContent = currentQuestion.question;
+
     answer1Element.textContent = currentQuestion.answers[0];
     answer2Element.textContent = currentQuestion.answers[1];
     answer3Element.textContent = currentQuestion.answers[2];
     answer4Element.textContent = currentQuestion.answers[3];
 }
 
+//Nollstället bakgrundsfärg
 function resetButtonColors() {
     answer1Element.style.backgroundColor = "";
     answer2Element.style.backgroundColor = "";
@@ -57,7 +60,9 @@ function resetButtonColors() {
     answer4Element.style.backgroundColor = "";
 }
 
-//funktion yani metod för att ändra färg på knapparna
+//Logik som visar om svaret är rätt eller fel
+//Visar nästa fråga om det finns fler
+//Annars visar hur många poäng spelaren fått
 function checkAnswer(button) {
     let circleElement = document.querySelector('#circle' + currentQuestionIndex);
     let selectedAnswer = button.textContent;
@@ -92,9 +97,7 @@ function checkAnswer(button) {
     }, 1000);
 }
 
-
-
-//kopplar funktionen checkAnswer() till varje knapp
+//Skapar eventlyssnare på varje svarsknapp på eventet "click"
 answer1Element.addEventListener('click', function() {
     checkAnswer(answer1Element);
 });
@@ -111,7 +114,6 @@ answer4Element.addEventListener('click', function() {
     checkAnswer(answer4Element);
 });
 
-
-// gör så att frågan laddas upp från början
+//Gör så att frågan laddas upp från början
 showCurrentQuestion();
 
